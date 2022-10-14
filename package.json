@@ -1,0 +1,26 @@
+{
+  "name": "newsletterserver",
+  "version": "1.0.0",
+  "description": "NewsLetter Assignment",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.1232.0",
+    "bcrypt": "^5.1.0",
+    "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-validator": "^6.14.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.6.5",
+    "nanoid": "^3.3.4",
+    "nodemailer": "^6.8.0",
+    "nodemon": "^2.0.20"
+  }
+}
