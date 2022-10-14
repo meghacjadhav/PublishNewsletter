@@ -36,7 +36,6 @@ const SES = new AWS.SES(awsConfig);
 app.post("/sendMail",async(req,res)=>{
   let title=req.body.title;
   let description=req.body.description;
-
   const senders=await Subscribe.find();
   let tomail=senders.map((val)=>{return val.email});
   tomail.join(",");
