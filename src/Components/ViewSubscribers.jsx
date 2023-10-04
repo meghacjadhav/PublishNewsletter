@@ -2,14 +2,15 @@ import React from 'react'
 import "../CSS/ViewSubscribers.css"
 import { useEffect, useState } from "react";
 
-const ViewSubscribers=()=> {
-const [subscriberInfo, setSubscriberInfo] = useState([]);
-const fetchData = async() => {
-    await fetch("https://blooming-ridge-45156.herokuapp.com/subscriber/view")
+const ViewSubscribers = () => {
+  const [subscriberInfo, setSubscriberInfo] = useState([]);
+  const fetchData = async () => {
+    await fetch("http://localhost:8080/subscriber/view")
       .then((response) => response.json())
-      .then((data) =>{
+      .then((data) => {
         console.log(data);
-        setSubscriberInfo(data.data)})
+        setSubscriberInfo(data.data)
+      })
       .catch((error) => console.log(error));
   };
 
@@ -19,19 +20,19 @@ const fetchData = async() => {
 
   return (
     <>
-    <div id='Subscribers'>Subscribers</div>
-    <div className='mainView'>
+      <div id='Subscribers'>Subscribers</div>
+      <div className='mainView'>
         <table>
           <tr><th>Mail ID</th></tr>
-          { 
-          subscriberInfo.map((item, index) => (
-          <tr key={index}>
-            <td>{item.email}</td>
-            </tr>
-              ))} 
+          {
+            subscriberInfo.map((item, index) => (
+              <tr key={index}>
+                <td>{item.email}</td>
+              </tr>
+            ))}
         </table>
-        </div>
-         </>
+      </div>
+    </>
   )
 }
 

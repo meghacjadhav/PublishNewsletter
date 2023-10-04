@@ -10,7 +10,7 @@ function Subscribe() {
 const submitted = (e)=>{
   e.preventDefault();
   console.log(subscribe)
-  fetch(`https://blooming-ridge-45156.herokuapp.com/subscriber/subscribe`, {
+  fetch(`http://localhost:8080/subscriber/subscribe`, {
       method: "POST",
       headers:{
         "Content-Type":"application/json",

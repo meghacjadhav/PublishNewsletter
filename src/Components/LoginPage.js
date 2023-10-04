@@ -18,7 +18,7 @@ function LoginPage() {
   const UserLogin = (e)=>{
       e.preventDefault();
       // console.log(login)
-      fetch(`https://blooming-ridge-45156.herokuapp.com/admin/login`, {
+      fetch(`http://localhost:8080/admin/login`, {
           method: "POST",
           headers:{
             "Content-Type":"application/json",
